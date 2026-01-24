@@ -295,7 +295,7 @@ def main():
             "rosetta_config": {
                 "base_model": "Qwen/Qwen3-0.6B",
                 "teacher_model": "Qwen/Qwen3-4B",
-                "checkpoints_dir": "local/checkpoints/0.6B_4B_general/final"
+                "checkpoints_dir": "/home/chuzifan/.cache/huggingface/hub/models--nics-efc--C2C_Fuser/snapshots/909c76d71cfb946171aa2ab7912dd07c0ba2e995/qwen3_0.6b+qwen3_4b_Fuser/final"
             }
         },
         eval_config={},
