@@ -1,0 +1,132 @@
+base:
+  subset: distractor
+  split: validation
+  limit: 100
+  max_rounds: 50
+  output_format: json
+  model_url: http://localhost:30000/v1
+  model_provider: local
+  # judge_model_provider: local
+  judge_model_provider: fireworks
+  judge_model_type: accounts/fireworks/models/qwen3-235b-a22b-instruct-2507
+  tokenizer: openai/gpt-oss-120b
+  num_workers: 50
+  max_tokens: 32768
+
+runs:
+  - name: singletool_history_full_summerized_full
+    limit: 100
+    max_tokens: 4096
+    stream: false
+    mode: singletool
+    model_provider: fireworks
+    model_type: accounts/fireworks/models/gpt-oss-120b
+    tools:
+      - search
+      - get_document
+    dataset: browsecomp
+    history_assistant: full
+    history_tool: summarized
+    history_reasoning: full
+    history_delay: 4
+    output: local/evaluation/gpt_oss_120b/singletool/browsecomp/full_summerized_full_4/results.json
+    
+  - name: singletool_history_full_summerized_full
+    limit: 100
+    max_tokens: 4096
+    stream: false
+    mode: singletool
+    model_provider: fireworks
+    model_type: accounts/fireworks/models/gpt-oss-120b
+    tools:
+      - search
+      - get_document
+    dataset: browsecomp
+    history_assistant: full
+    history_tool: summarized
+    history_reasoning: full
+    history_delay: 5
+    output: local/evaluation/gpt_oss_120b/singletool/browsecomp/full_summerized_full_5/results.json
+
+  - name: singletool_history_full_summerized_full
+    limit: 100
+    max_tokens: 4096
+    stream: false
+    mode: singletool
+    model_provider: fireworks
+    model_type: accounts/fireworks/models/gpt-oss-120b
+    tools:
+      - search
+      - get_document
+    dataset: browsecomp
+    history_assistant: full
+    history_tool: summarized
+    history_reasoning: full
+    history_delay: 6
+    output: local/evaluation/gpt_oss_120b/singletool/browsecomp/full_summerized_full_6/results.json
+
+  - name: singletool_history_full_summerized_full
+    limit: 100
+    max_tokens: 4096
+    stream: false
+    mode: singletool
+    model_provider: fireworks
+    model_type: accounts/fireworks/models/gpt-oss-120b
+    tools:
+      - search
+      - get_document
+    dataset: browsecomp
+    history_assistant: full
+    history_tool: summarized
+    history_reasoning: full
+    history_delay: 7
+    output: local/evaluation/gpt_oss_120b/singletool/browsecomp/full_summerized_full_7/results.json
+
+  - name: singletool_history_full_summerized_full
+    limit: 100
+    max_tokens: 4096
+    stream: false
+    mode: singletool
+    model_provider: fireworks
+    model_type: accounts/fireworks/models/gpt-oss-120b
+    tools:
+      - search
+      - get_document
+    dataset: browsecomp
+    history_assistant: full
+    history_tool: summarized
+    history_reasoning: full
+    history_delay: 8
+    output: local/evaluation/gpt_oss_120b/singletool/browsecomp/full_summerized_full_8/results.json
+
+  - name: singletool_history_full_summerized_full
+    limit: 100
+    max_tokens: 4096
+    stream: false
+    mode: singletool
+    model_provider: fireworks
+    model_type: accounts/fireworks/models/gpt-oss-120b
+    tools:
+      - search
+      - get_document
+    dataset: browsecomp
+    history_assistant: full
+    history_tool: summarized
+    history_reasoning: full
+    history_delay: 9
+    output: local/evaluation/gpt_oss_120b/singletool/browsecomp/full_summerized_full_9/results.json
+
+  # - name: GPT_oss_120b_tree
+  #   mode: tree
+  #   limit: 4
+  #   model_provider: fireworks
+  #   model_type: accounts/fireworks/models/gpt-oss-120b
+  #   tools:
+  #     - search
+  #     - get_document
+  #   dataset: browsecomp
+  #   output: local/evaluation/gpt_oss_120b/tree_EPA/browsecomp/results.json
+  #   state_rule:
+  #     - execute
+  #     - plan
+  #     - answer

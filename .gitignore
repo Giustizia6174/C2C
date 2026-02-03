@@ -3,6 +3,7 @@
 *__pycache__*
 *.egg-info
 *.png
+*.md
 
 # Folders
 .vscode/
@@ -14,6 +15,9 @@ eval_results/
 outputs/
 results/
 checkpoints/
+context_files/
+test/
+recipe/
 
 recipe/experiments/
 script/evaluation/deprecated/
@@ -23,3 +27,10 @@ script/analysis/oracle/
 run.sh
 test.py
 script/train/SFT_train_debug.py
+AGENTS.md
+CLAUDE.md
+package-lock.json
+.env
+
+# Secrets
+rosetta/context/workflow/API.py
